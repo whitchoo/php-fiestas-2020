@@ -15,8 +15,8 @@
 				const domain = 'meet.jit.si';
 				const options = {
 					roomName: 'pruebamau',
-					width: 700,
-					height: 700,
+					width: 800,
+					height: 400,
 					parentNode: document.querySelector('#jitsi-meet-conf-container'),
 					
 					userInfo: {
