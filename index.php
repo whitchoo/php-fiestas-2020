@@ -1,9 +1,5 @@
 <!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Generic - Phantom by HTML5 UP</title>
@@ -21,7 +17,7 @@
 				const domain = 'meet.jit.si';
 				const options = {
 					roomName: 'pruebamau',
-					width: 800,
+					width: screen.width-200,
 					height: 400,
 					parentNode: document.querySelector('#jitsi-meet-conf-container'),
 					
@@ -56,7 +52,7 @@
 						<div class="inner">
 
 							<!-- Logo -->
-								<a href="index.html" class="logo">
+								<a href="" class="logo">
 									<span class="symbol"></span><span class="title">Bienvenido a la fiesta de cumpleaños de pepito!</span>
 								</a>
 
@@ -84,13 +80,20 @@
 				</div>
 				
 				
+				
+				
+				
+				
+				
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<button id='btnStart'>Start</button>
+							<button id='btnStart'>Sala de video</button><br>
+							<center>
 							<div class="container">
 								<div id='jitsi-meet-conf-container'></div>
 							</div>
+							</center>
 						</div>
 					</div>
 
@@ -104,7 +107,7 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<div class="inner">
+						<!--<div class="inner">
 							<section>
 								<h2>Get in touch</h2>
 								<form method="post" action="#">
@@ -137,8 +140,11 @@
 									<li><a href="#" class="icon solid style2 fa-envelope"><span class="label">Email</span></a></li>
 								</ul>
 							</section>
+							
+							
+							-->
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; xxxxxxx. All rights reserved</li><li>Design: xxxxxxxxxxxxx</li>
 							</ul>
 						</div>
 					</footer>
