@@ -17,9 +17,25 @@
 				const domain = 'meet.jit.si';
 				const options = {
 					roomName: 'pruebamau',
-					width: screen.width-200,
+					width: screen.width-10,
 					height: 400,
 					parentNode: document.querySelector('#jitsi-meet-conf-container'),
+					
+				/**/	
+					hideLobbyButton: true,
+					requireDisplayName: false,
+					enableWelcomePage: false,
+					noticeMessage: 'Felicidades Pepito!',
+					disableInviteFunctions: true,
+		
+					
+					interfaceConfigOverwrite: { 
+												APP_NAME: 'Felicidades Pepito!',
+												JITSI_WATERMARK_LINK: 'https://google.com',
+												DISPLAY_WELCOME_PAGE_CONTENT: false
+												},
+					
+				/**/		
 					
 					userInfo: {
 						email: 'pepito@micorreo.com',
@@ -27,6 +43,7 @@
 					}
 				};
 				apiObj = new JitsiMeetExternalAPI(domain, options);
+				//apiObj.executeCommand('toggleLobby',true);
 			}
 		</script>
 		
@@ -43,7 +60,7 @@
 	
 	
 	
-	<body class="is-preload">
+	<body class="is-preload" onload="StartMeeting()">
 		<!-- Wrapper -->
 			<div id="wrapper">
 
