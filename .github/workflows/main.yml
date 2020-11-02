@@ -1,0 +1,22 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the main branch
+on: push
+name: Publish Website
+jobs:
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2.1.0
+      with:
+        fetch-depth: 2
+    - name: FTP-Deploy-Action
+      uses: fiestas2020/FTP-Deploy-Action@3.1.1
+      with:
+        ftp-server: ftp://ftpupload.net/
+        ftp-username: epiz_27105566
+        ftp-password: Fiestas2020
