@@ -1,6 +1,10 @@
 <html>
     <head>
 		<title>Fiestas 2020</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="CSSPhantom/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     </head>
 		<h1>Bienvenido a la fiesta de cumpleaños de pepito!</h1>
 		
@@ -13,7 +17,12 @@
 					roomName: 'pruebamau',
 					width: 700,
 					height: 700,
-					parentNode: document.querySelector('#jitsi-meet-conf-container')
+					parentNode: document.querySelector('#jitsi-meet-conf-container'),
+					
+					userInfo: {
+						email: 'pepito@micorreo.com',
+						displayName: 'Invitado1'
+					}
 				};
 				apiObj = new JitsiMeetExternalAPI(domain, options);
 			}
