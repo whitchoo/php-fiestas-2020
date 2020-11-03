@@ -1,58 +1,62 @@
-<!DOCTYPE HTML>
+<!DOCTYPE HTML> 
 
 <html>
 	<head>
-		<title>Generic - Phantom by HTML5 UP</title>
+		<title>Fiestas virtuales</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="CSSPhantom/assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="CSSPhantom/assets/css/noscript.css" /></noscript>
+		<noscript><link rel="stylesheet" href="CSSPhantom/assets/css/noscript.css" /></noscript> 
 	</head>
 	
 				
 		<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
 		<script src='https://meet.jit.si/external_api.js'></script>
 		<script>
+
 			function StartMeeting(){
-				const domain = 'meet.jit.si';
-				const options = {
-					roomName: 'pruebamau',
-					width: screen.width-10,
-					height: 400,
-					parentNode: document.querySelector('#jitsi-meet-conf-container'),
-					
-				/**/	
-					hideLobbyButton: true,
-					requireDisplayName: false,
-					enableWelcomePage: false,
-					noticeMessage: 'Felicidades Pepito!',
-					disableInviteFunctions: true,
-		
-					
-					interfaceConfigOverwrite: { 
-												APP_NAME: 'Felicidades Pepito!',
-												JITSI_WATERMARK_LINK: 'https://google.com',
-												DISPLAY_WELCOME_PAGE_CONTENT: false
-												},
-					
-				/**/		
-					
-					userInfo: {
-						email: 'pepito@micorreo.com',
-						displayName: 'Invitado1'
-					}
-				};
-				apiObj = new JitsiMeetExternalAPI(domain, options);
-				//apiObj.executeCommand('toggleLobby',true);
+				if (document.getElementById('flagshowvideo').value=='si'){
+					const domain = 'meet.jit.si';
+					const options = {
+						roomName: 'pruebamau',
+						width: screen.width-10,
+						height: 400,
+						parentNode: document.querySelector('#jitsi-meet-conf-container'),
+						
+					/**/	
+						hideLobbyButton: true,
+						requireDisplayName: false,
+						enableWelcomePage: false,
+						noticeMessage: 'Felicidades Pepito!',
+						disableInviteFunctions: true,
+			
+						
+						interfaceConfigOverwrite: { 
+													APP_NAME: 'Felicidades Pepito!',
+													JITSI_WATERMARK_LINK: 'https://google.com',
+													DISPLAY_WELCOME_PAGE_CONTENT: false
+													},
+						
+					/**/		
+						
+						userInfo: {
+							email: 'pepito@micorreo.com',
+							displayName: 'Invitado1'
+						}
+					};
+					apiObj = new JitsiMeetExternalAPI(domain, options);
+					document.getElementById('flagshowvideo').value='no';
+				}
 			}
 		</script>
 		
 		
         <script>
-            $(function(){
-                $('#btnStart').on('click',function(){
-                    StartMeeting();
-                });
+            
+			$(function(){ /////funciones a ejecutar al arrancar la página 
+					//$('#btnStart').on('click',function(){   //LISTENER!... usar este if para detectar el onclick del boton con id btnStart
+						StartMeeting();
+					//});
             });
             
         </script>
@@ -60,7 +64,7 @@
 	
 	
 	
-	<body class="is-preload" onload="StartMeeting()">
+	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -105,7 +109,8 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<button id='btnStart'>Sala de video</button><br>
+							<input type="hidden" id="flagshowvideo" value="si"></input>
+							<!--<button id='btnStart'>Sala de video</button><br>-->
 							<center>
 							<div class="container">
 								<div id='jitsi-meet-conf-container'></div>
