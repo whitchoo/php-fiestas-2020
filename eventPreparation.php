@@ -51,15 +51,28 @@
 				<div class="inner">
 					<h1>Bienvenido!</h1>
 					<span class="image main"><img src="images/invited.jpg" alt="" /></span>
-					<p>Enhorabuena! estas invitado al evento! para poder ayudarte en tu experiencia, te pediremos algunos datos para identificarte. gracias!</p>
+					<p>Enhorabuena! estas invitado al evento! para poder ayudarte en tu experiencia, te pediremos algunos datos para identificarte y algo más para preparar una sorpresa... gracias!</p>
 					
 					<section>
-						<h2>Datos del invitado</h2>
-						<form method="post" action="fiestaPrincipal.php">
+						<h2>Información solicitada</h2>
+						<form method="POST" action="fiestaPrincipal.php">
 							<div class="fields">
 								<div class="field half">
-									<input type="Hidden" name="evento" value="<?=$_GET["idEvento"];?>">
-									<input type="text" name="nombre" id="nombre" placeholder="Nombre" pattern="[a-zA-Z0-9]{3,}" title="Debe ingresar un nombre válido."/>
+									<input type="Hidden" name="idEvento" id="idEvento" value="<?=$_GET["idEvento"];?>">
+									<input type="text" name="nombre" id="nombre" placeholder="Nombre... o como quieres que te identifiquen en el evento..." pattern="[a-zA-Z0-9 ]{3,}" title="Debe ingresar un nombre válido."/> 
+									
+									
+									<br><br>
+									<input type="text" name="palabra" id="palabra" placeholder="Una palabra que describa al agazajado..." pattern="[a-zA-Z]{3,}" title="Sólo una palabra! ;)"/> 
+									
+									
+									<br><br>¿Quieres dejar un mensaje para el organizador? <br>
+									(Saludos, felicitaciones, enhorabuenas, Kudos! ( ͡° ͜ʖ ͡°) &nbsp;&nbsp;) <br>
+									(OPCIONAL... pero molaría que dediques unas palabras ;) ):
+									<textarea name="kudos" id="kudos">
+									
+									</textarea>
+									
 								</div>
 							</div>
 							<ul class="actions">
@@ -67,6 +80,14 @@
 							</ul>
 						</form>
 					</section>
+					
+					
+					
+		
+					
+					
+					
+					
 					
 					
 				</div>

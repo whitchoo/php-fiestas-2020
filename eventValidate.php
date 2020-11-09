@@ -71,7 +71,7 @@
 							//echo $diff;
 							if ($diff >= 0) {
 								/***********************ACCESO AL EVENTO!!!!*******************/
-								header("Location: eventPreparation.php?evento='".$idEvento."'");
+								header("Location: eventPreparation.php?idEvento=".$idEvento);
 								echo "<h4>Puedes pasar!</h4>";
 							}else{
 								echo "<h4>Has llegado temprano!</h4><p>Las puertas del evento se abren 30 minutos antes del comienzo...</p>.";

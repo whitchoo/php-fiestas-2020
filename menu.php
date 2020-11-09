@@ -11,7 +11,8 @@ include 'db.php';
 			<li><a href="index.html">Administrar mi evento</a></li>
 			<li><a href="index.html">Crea un nuevo evento</a></li>
 			
-
+			
+			<li><a href="index.html">Ayuda!</a></li>
 			<li><a href="index.html">¿Quienes somos?</a></li>
 
 		</ul>
