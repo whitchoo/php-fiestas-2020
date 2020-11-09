@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Fiestas virtuales</title>
+		<title>Eventos Online</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="CSSPhantom/assets/css/main.css" />
@@ -10,87 +10,34 @@
 	</head>
 	
 				
-		<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
-		<script src='https://meet.jit.si/external_api.js'></script>
-		<script>
-
-			function StartMeeting(){
-				if (document.getElementById('flagshowvideo').value=='si'){
-					const domain = 'meet.jit.si';
-					const options = {
-						roomName: 'pruebamau',
-						width: screen.width-10,
-						height: 400,
-						parentNode: document.querySelector('#jitsi-meet-conf-container'),
-						
-					/**/	
-						hideLobbyButton: true,
-						requireDisplayName: false,
-						enableWelcomePage: false,
-						noticeMessage: 'Felicidades Pepito!',
-						disableInviteFunctions: true,
+	<script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
 			
-						
-						interfaceConfigOverwrite: { 
-													APP_NAME: 'Felicidades Pepito!',
-													JITSI_WATERMARK_LINK: 'https://google.com',
-													DISPLAY_WELCOME_PAGE_CONTENT: false
-													},
-						
-					/**/		
-						
-						userInfo: {
-							email: 'pepito@micorreo.com',
-							displayName: 'Invitado1'
-						}
-					};
-					apiObj = new JitsiMeetExternalAPI(domain, options);
-					document.getElementById('flagshowvideo').value='no';
-				}
-			}
-		</script>
-		
-		
-        <script>
-            
-			$(function(){ /////funciones a ejecutar al arrancar la página 
-					//$('#btnStart').on('click',function(){   //LISTENER!... usar este if para detectar el onclick del boton con id btnStart
-						///StartMeeting();
-					//});
-            });
-            
-        </script>
-	
-	
-	
-	
 	<body class="is-preload">
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
 
-							<!-- Logo -->
-								<a href="" class="logo">
-									<span class="symbol"></span><span class="title">Bienvenido a la fiesta de cumpleaños de pepito!</span>
-								</a>
+					<!-- Logo 
+						<a href="" class="logo">
+							<span class="symbol"></span><span class="title">Eventos Online</span>
+						</a>-->
 
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
+					<!-- Nav -->
+						<nav>
+							<ul>
+								<li><a href="#menu">Menu</a></li>
+							</ul>
+						</nav>
 
-						</div>
-					</header>
-
-				<?php
-				require 'menu.php';
-				?>
 				</div>
+			</header>
+
+			<?php
+			require 'menu.php';
+			?>
 				
 				
 				
@@ -98,27 +45,79 @@
 				
 				
 				
-				<!-- Main -->
-					<div id="main">
-						<div class="inner">
-							<input type="hidden" id="flagshowvideo" value="si"></input>
-							<!--<button id='btnStart'>Sala de video</button><br>-->
-							<center>
-							<div class="container">
-								<div id='jitsi-meet-conf-container'></div>
+				
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+					<h1>Eventos Online</h1>
+					<span class="image main"><img src="images/confeti-wide.jpg" alt="" /></span>
+					<H2>Bienvenido a tu evento online...</h2>
+					
+
+					<section>
+						<h4>Si eres invitado, ingresa tu código a continuación:</h4>
+						<form method="post" action="eventValidate.php">
+							<div class="row gtr-uniform">
+								<div class="col-6 col-12-xsmall" align="center">
+									<input type="text" name="idEvento" id="idEvento" value="" placeholder="Aqui tu código! (ej. <SCMDDFESF>)" pattern="[a-zA-Z0-9]{9}" title="Revise el código que se le ha dado. No incluyas los espacios en blanco."/>
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<input type="submit" value="Entrar!" class="primary" />
+								</div>
+							
+
 							</div>
-							</center>
-						</div>
-					</div>
+						</form>
+					</section>
+
+					<br><br>
+					<form  method="post" action="#"><br>
+					<h4>Si quieres organizar tu evento online, este es tu sitio... </h4>
+					<input type="submit" value="Crea tu nuevo evento!" class="primary" />
+					</form>
+					
+					
+					
+					
+					
+					<section>
+						<strong><br><br><br><br><p>Eres el organizador de un evento, entra aqui para administrar:</p></strong>
+						<form method="post" action="#">
+							<div class="row gtr-uniform">
+								<div class="col-6 col-12-xsmall" align="center">
+									<input type="text" name="demo-name" id="demo-name" value="" placeholder="Aqui tu código! (ej. <SCM DDF ESF>)" pattern="[a-z0-9]{11}" title="Revise el código que se le ha dado."/>
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<input type="password"  name="demo-name" id="demo-name" class="primary" />
+								</div>
+							</div>
+							<div class="row gtr-uniform">
+
+								<div class="col-6 col-12-xsmall">
+									<input type="submit" value="administrar!" class="primary" />
+								</div>
+							
+
+							</div>
+
+						</form>
+					</section>
+
+					
+					
+					
+					
+				</div>
+			</div>
 
 
 
-				<?php
-				require 'footer.php';
-				?>
+			<?php
+			require 'footer.php';
+			?>
 
 
-
+		</div>
 
 				
 
