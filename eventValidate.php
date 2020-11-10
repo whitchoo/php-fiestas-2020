@@ -55,7 +55,7 @@
 
 				// Attempt select query execution
 				$sql = "SELECT idEvento,fechaHoraInicio,fechaHoraFin, password ,fechaHoraInicio,DATE_ADD(fechaHoraInicio, INTERVAL -30 MINUTE) AS 'inicioPermitido' ";
-				$sql = $sql."FROM Eventos WHERE idEvento = '".$idEvento."' and enabled = 1 ";
+				$sql = $sql."FROM eventos WHERE idEvento = '".$idEvento."' and enabled = 1 ";
 				$sql = $sql."AND fechaHoraFin >=NOW()";
 
 
@@ -71,7 +71,8 @@
 							//echo $diff;
 							if ($diff >= 0) {
 								/***********************ACCESO AL EVENTO!!!!*******************/
-								header("Location: eventPreparation.php?idEvento=".$idEvento);
+								echo '<script>window.location.href = "eventPreparation.php?idEvento='.$idEvento.'";</script>';
+								//header("Location: https://fiestasonline.000webhostapp.com/eventPreparation.php?idEvento=".$idEvento);
 								echo "<h4>Puedes pasar!</h4>";
 							}else{
 								echo "<h4>Has llegado temprano!</h4><p>Las puertas del evento se abren 30 minutos antes del comienzo...</p>.";

@@ -106,6 +106,10 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
+						
+							<h4>Bienvenido/a! </h4>
+							<p> Esta es la p&aacute;gina del evento. A continuaci&oacute;n tienes una videollamada para interactuar con el resto de invitados.</p>
+						
 							<input type="hidden" id="flagshowvideo" value="si"></input>
 							<!--<button id='btnStart'>Sala de video</button><br>-->
 							<center>
