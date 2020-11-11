@@ -6,6 +6,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="CSSPhantom/assets/css/main.css" />
+		<link rel="shortcut icon" href="/images/icon.ico" />
 		<noscript><link rel="stylesheet" href="CSSPhantom/assets/css/noscript.css" /></noscript> 
 	</head>
 	
@@ -71,7 +72,7 @@
 					</section>
 
 					<br><br>
-					<form  method="post" action="#"><br>
+					<form  method="post" action="eventNew.php"><br>
 					<h4>Si quieres organizar tu evento online, este es tu sitio... </h4>
 					<input type="submit" value="Crea tu nuevo evento!" class="primary" />
 					</form>
